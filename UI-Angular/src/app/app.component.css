@@ -1,0 +1,98 @@
+/* Add some spacing to the toolbar buttons */
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Adjust the z-index as needed */
+}
+
+mat-toolbar button {
+    margin-left: 8px;
+  }
+  
+  /* Add some spacing between the title and buttons */
+  .mat-toolbar .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Disable the active mode button to visually indicate the current mode */
+  mat-toolbar button[disabled] {
+    background-color: #808080;
+    cursor: not-allowed;
+  }
+  
+  /* Hide mode buttons when settings are open */
+  mat-toolbar button:not(:first-child)[ngIf="settingsOpen"] {
+    display: none;
+  }
+  
+  /* app-multi-component.component.css */
+  
+  /* Adjust the container styling */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+  }
+  
+  /* Improve the row styling */
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Add rounded corners for a softer look */
+    overflow: hidden;
+    /* margin: 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Add hover effect on rows */
+  /* .row:hover {
+    transform: scale(1.05);
+  }
+   */
+  /* Add some spacing inside the row */
+  .row > * {
+    padding: 15px;
+  }
+  
+  /* Add a border between rows */
+  .row:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  drag-scroll {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .players-text {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+    color: #333;
+  }
+  
+  .container {
+    margin: 0 20px; /* Adjust the left and right margins as needed */
+  }
+  
+  .player-scroll-container {
+    overflow-x: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  .player-scroll-container::-webkit-scrollbar {
+    width: 0; /* For Chrome, Safari, and Opera */
+  }
+  
+  .player-scroll {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between player components */
+  }
+  
+  .app-player {
+    flex: 0 0 auto;
+  }

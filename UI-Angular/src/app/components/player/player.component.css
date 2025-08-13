@@ -1,0 +1,84 @@
+.player-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+
+/* .p-icon{
+  width: 30px;
+  height: 30px;
+
+} */
+
+
+
+
+/* player.component.css */
+.player-container {
+  display: flex;
+  justify-content: center;
+}
+
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd; /* Adjust border color */
+  border-radius: 10px; /* Add more rounded corners */
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+}
+
+.player-card:hover {
+  transform: scale(1.05); /* Scale up on hover for a subtle effect */
+}
+
+.icon {
+  width: 40%;  margin-right: 10px;
+}
+
+.player-details {
+  padding: 16px;
+  text-align: center;
+}
+
+/* app.component.css */
+
+.card-image {
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure the image is treated as a block element */
+}
+
+.card-image img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+
+.player-details h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333; /* Adjust text color */
+}
+
+.player-details p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.player-scroll {
+  height: 18rem;
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+}
+
+.app-player {
+  flex: 0 0 auto; /* Ensure each player component doesn't grow and stays fixed */
+  margin-right: 10px; /* Adjust spacing between player components */
+}

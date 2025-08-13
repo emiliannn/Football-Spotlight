@@ -1,0 +1,59 @@
+<!-- app.component.html -->
+<main>
+  <div>
+    <mat-toolbar color="primary">
+      <span>Football Spotlight</span>
+      <mat-icon class="icon">sports_soccer</mat-icon>
+      <span class="spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="modeMenu">
+        <mat-icon>settings</mat-icon>
+      </button>
+      <mat-menu #modeMenu="matMenu">
+        <!-- <button mat-menu-item (click)="switchMode('user')" [disabled]="currentMode === 'user'">User Mode</button>
+        <button mat-menu-item (click)="switchMode('admin')" [disabled]="currentMode === 'admin'">Admin Mode</button> -->
+
+
+        <mat-button-toggle-group  name="favoriteColor" [(ngModel)]="user.mode"  aria-label="Favorite Color">
+          <mat-button-toggle  value="user">User mode</mat-button-toggle>
+          <mat-button-toggle value="admin">Admin mode</mat-button-toggle>
+        </mat-button-toggle-group>
+        <div *ngIf="user.mode === 'admin'">
+          <button mat-menu-item (click)="openAddItemPopup('player')">Add player</button>
+          <button mat-menu-item (click)="openAddItemPopup('manager')">Add manager</button>
+          <!-- <button mat-menu-item (click)="openAddItemPopup('contract')">Add contract</button> -->
+          <button mat-menu-item (click)="openAddItemPopup('footballClub')">Add football club</button>
+        </div>
+      </mat-menu>
+    </mat-toolbar>
+
+    <div>
+      <div class="container">
+        <div class="players-text">
+          <p><b>Players</b></p>
+        </div>
+        <div class="player-scroll-container">
+          <div class="player-scroll">
+            <div *ngFor="let player of playersList; let i = index" class="app-player">
+              <app-player [player]="player" [currentMode]="user.mode"></app-player>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="players-text">
+          <p><b>Managers</b></p>
+        </div>
+        <div class="player-scroll-container">
+          <div class="player-scroll">
+            <div *ngFor="let manager of managersList; let i = index" class="app-player">
+              <app-manager [manager]="manager" [currentMode]="user.mode"></app-manager>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<router-outlet></router-outlet>

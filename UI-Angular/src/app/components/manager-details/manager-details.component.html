@@ -1,0 +1,43 @@
+<div *ngIf="currentMode=='admin'">
+    <div *ngIf="manager">
+        <div *ngIf="isEditMode">
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput [(ngModel)]="manager.fullName" placeholder="Full Name">
+                <p>Date of Birth: {{ manager.dateOfBirth }}</p>
+                <p>Age: {{ manager.age }}</p>
+                <p>Nationality: {{ manager.nationality }}</p>
+                <p>Role: {{ manager.role }}</p>
+              </mat-form-field>
+        </div>
+    
+        <div *ngIf="!isEditMode">
+            <h2>{{ manager.fullName }}</h2>
+            <p>Date of Birth: {{ manager.dateOfBirth }}</p>
+            <p>Age: {{ manager.age }}</p>
+            <p>Nationality: {{ manager.nationality }}</p>
+            <p>Role: {{ manager.role }}</p>
+            <button (click)="deleteItem(manager.id)">Delete</button>
+    
+        </div>
+    
+        <button *ngIf="!isEditMode" (click)="onEditClick(true)">Edit</button>
+        <button *ngIf="isEditMode" (click)="onEditClick(false)">Update</button>
+    </div>
+</div>
+<div *ngIf="currentMode=='user'">
+    <div *ngIf="manager">
+          
+        <div>
+            <h2>{{ manager.fullName }}</h2>
+            <p>Date of Birth: {{ manager.dateOfBirth }}</p>
+            <p>Age: {{ manager.age }}</p>
+            <p>Nationality: {{ manager.nationality }}</p>
+            <p>Role: {{ manager.role }}</p>
+        </div>
+    
+    </div>
+</div>
+
+
+

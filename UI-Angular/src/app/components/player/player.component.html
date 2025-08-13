@@ -1,0 +1,19 @@
+<!-- player.component.html -->
+<div class="player-container">
+  <div *ngIf="player" class="player-card" (click)="openPlayerDetailsPopup()">
+    <div class="card-image">
+      <img src="../../assets/player.png" alt="Product Image" class="img-fluid">
+    </div>
+    <div class="player-details">
+      <h2>{{ player.fullName }}</h2>
+      <p>Position: {{ player.position }}</p>
+      <!-- <p>Date of Birth: {{ player?.dateOfBirth }}</p>
+      <p>Age: {{ player?.age }}</p>
+      <p>Height: {{ player?.height }}</p>
+      <p>Citizenship: {{ player?.citizenship }}</p>
+      
+      <p>Foot: {{ player?.foot }}</p> -->
+      <!-- <p>Outfitter: {{ player.outfitter }}</p> -->
+    </div>
+  </div>
+</div>

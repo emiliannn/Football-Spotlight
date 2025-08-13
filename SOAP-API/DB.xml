@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+    <users>
+        <managers>
+            <manager id="100"><managerName>Manager 1000</managerName>
+            </manager>
+            <manager id="1"><managerName>Manager 1</managerName>
+            </manager>
+            <manager id="2"><managerName>Manager 2</managerName>
+            </manager>
+            <manager id="3"><managerName>Manager 3</managerName>
+            </manager>
+            <manager id="4"><managerName>Manager 4</managerName>
+            </manager>
+            <manager id="5"><managerName>Manager 5</managerName>
+            </manager>
+        </managers>
+        <admin>
+            <fullName>
+                     Administrator
+            </fullName>
+        </admin>
+    </users>
+    <players>
+        
+        <player contractID="2" id="2">
+            <fullName>Cristiano Ronaldo</fullName>
+            <dateOfBirth>05/02/1985</dateOfBirth>
+            <age>38</age>
+            <height>1.87</height>
+            <citizenship>Portugal</citizenship>
+            <position>Attack - Centre-Forward</position>
+            <foot>right</foot>
+            <outfitter>Nike</outfitter>
+        </player>
+        <player contractID="3" id="3">
+            <fullName>Gianluigi Buffon</fullName>
+            <dateOfBirth>28/01/1978</dateOfBirth>
+            <age>45</age>
+            <height>1.92</height>
+            <citizenship>Italy</citizenship>
+            <position>Goalkeeper</position>
+            <foot>right</foot>
+            <outfitter>Puma</outfitter>
+        </player>
+    </players>
+    <!--footballClubs-->
+    <footballClubs>
+        <footballClub id="2">
+            <name>FC Barcelona</name>
+            <squadSize>22</squadSize>
+            <averageAge>25.1</averageAge>
+            <stadium>Spotify Camp Nou</stadium>
+            <manager managerID="2"/>
+        </footballClub>
+        <footballClub id="3">
+            <name>Al-Nassr FC</name>
+            <squadSize>34</squadSize>
+            <averageAge>26.7</averageAge>
+            <stadium>Mrsool Park</stadium>
+            <manager managerID="3"/>
+        </footballClub>
+        <footballClub id="4">
+            <name>Manchester United</name>
+            <squadSize>29</squadSize>
+            <averageAge>26.2</averageAge>
+            <stadium>Old Trafford</stadium>
+            <manager managerID="4"/>
+        </footballClub>
+        <footballClub id="5">
+            <name>Juventus FC</name>
+            <squadSize>27</squadSize>
+            <averageAge>26.8</averageAge>
+            <stadium>Allianz Stadium</stadium>
+            <manager managerID="5"/>
+        </footballClub>
+        <footballClub id="6">
+            <name>Parma Calcio 1913</name>
+            <squadSize>30</squadSize>
+            <averageAge>24.5</averageAge>
+            <stadium>Ennio Tardini</stadium>
+            <manager managerID="6"/>
+        </footballClub>
+    </footballClubs>
+    <!-- Contracts -->
+    <contracts>
+        <contract currentClubID="1" id="1" previousClubID="2">
+            <joined>01/01/2023</joined>
+            <contractExpires>01/01/2027</contractExpires>
+            <contractOption>Purchase</contractOption>
+        </contract>
+        <contract currentClubID="5" id="2" previousClubID="4">
+            <joined>01/01/2023</joined>
+            <contractExpires>01/01/2024</contractExpires>
+            <contractOption>Loan</contractOption>
+        </contract>
+        <contract currentClubID="1" id="3" previousClubID="5">
+            <joined>01/01/2023</joined>
+            <contractExpires>01/01/2027</contractExpires>
+            <contractOption>Purchase</contractOption>
+        </contract>
+    </contracts>
+</database>

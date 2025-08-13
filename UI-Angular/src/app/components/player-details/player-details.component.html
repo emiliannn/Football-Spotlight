@@ -1,0 +1,66 @@
+<div *ngIf="currentMode=='admin'">
+    <div *ngIf="player">
+        Mode: {{ currentMode}}
+    
+        <div *ngIf="isEditMode">
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput [(ngModel)]="player.fullName" placeholder="Full Name">
+                <p>Date of Birth: {{ player.dateOfBirth }}</p>
+                <p>Age: {{ player.age }}</p>
+                <p>Height: {{ player.height }}</p>
+                <p>Citizenship: {{ player.citizenship }}</p>
+                <p>Position: {{ player.position }}</p>
+                <p>Foot: {{ player.foot }}</p>
+              </mat-form-field>
+        </div>
+    
+        <div *ngIf="!isEditMode">
+            <h2>{{ player.fullName }}</h2>
+            <p>Date of Birth: {{ player.dateOfBirth }}</p>
+            <p>Age: {{ player.age }}</p>
+            <p>Height: {{ player.height }}</p>
+            <p>Citizenship: {{ player.citizenship }}</p>
+            <p>Position: {{ player.position }}</p>
+            <p>Foot: {{ player.foot }}</p>
+            <p>Previous club: {{ player.previousClub }}</p>
+            <p>Current club: {{ player.currentClub }}</p>
+            <p>Manager: {{ player.manager }}</p>
+    
+            <button *ngIf="currentMode=='admin'" (click)="deleteItem(player.id)">Delete</button>
+        </div>
+    
+    
+    
+        <button *ngIf="!isEditMode && currentMode=='admin'" (click)="onEditClick(true)">Edit</button>
+        <button *ngIf="isEditMode" (click)="onEditClick(false)">Update</button>
+    </div>
+    
+</div>
+
+
+<div *ngIf="currentMode=='user'">
+    <div *ngIf="player">
+        Mode: {{ currentMode}}
+    
+    
+        <div>
+            <h2>{{ player.fullName }}</h2>
+            <p>Date of Birth: {{ player.dateOfBirth }}</p>
+            <p>Age: {{ player.age }}</p>
+            <p>Height: {{ player.height }}</p>
+            <p>Citizenship: {{ player.citizenship }}</p>
+            <p>Position: {{ player.position }}</p>
+            <p>Foot: {{ player.foot }}</p>
+            <p>Previous club: {{ player.previousClub }}</p>
+            <p>Current club: {{ player.currentClub }}</p>
+            <p>Manager: {{ player.manager }}</p>
+    
+        </div>
+    
+    
+    </div>
+    
+</div>
+
+

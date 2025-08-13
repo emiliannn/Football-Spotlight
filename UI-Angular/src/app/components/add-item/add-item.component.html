@@ -1,0 +1,221 @@
+<div>
+
+  <!------------------------------------add player-------------------------------------------------------->
+  <div *ngIf="item === 'player'">
+    <div >
+      <h1 mat-dialog-title>Add Player</h1>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput [(ngModel)]="player.fullName" placeholder="Full Name">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [(ngModel)]="player.dateOfBirth" placeholder="Date of Birth">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput [(ngModel)]="player.age" placeholder="Age">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Height</mat-label>
+        <input matInput [(ngModel)]="player.height" placeholder="Height">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Citizenship</mat-label>
+        <input matInput [(ngModel)]="player.citizenship" placeholder="Citizenship">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Position</mat-label>
+        <input matInput [(ngModel)]="player.position" placeholder="Position">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Foot</mat-label>
+        <input matInput [(ngModel)]="player.foot" placeholder="Foot">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Outfitter</mat-label>
+        <input matInput [(ngModel)]="player.outfitter" placeholder="Outfitter">
+      </mat-form-field>
+  
+      <!-- <div mat-dialog-actions>
+        <button mat-button>Cancel</button>
+        <button mat-button (click)="addPlayer()">Add</button>
+      </div> -->
+    </div>
+  
+    <div>
+      <h1 mat-dialog-title>Add contract for the player</h1>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Contract expires</mat-label>
+        <input matInput [(ngModel)]="contract.contractExpires" placeholder="contractExpires">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Contract Option</mat-label>
+        <input matInput [(ngModel)]="contract.contractOption" placeholder="contractOption">
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="fill">
+        <mat-label>previousClubID</mat-label>
+        <input matInput [(ngModel)]="contract.previousClubID" placeholder="previousClubID">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>currentClubID</mat-label>
+        <input matInput [(ngModel)]="contract.currentClubID" placeholder="currentClubID">
+      </mat-form-field>
+  
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Football Club</mat-label>
+        <mat-select [(ngModel)]="contract.previousClubID" placeholder="footballClubID">
+          <mat-option *ngFor="let x of footballClubs" [value]="x.id">
+            {{x.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+  
+      <mat-form-field appearance="fill">
+        <mat-label>joined</mat-label>
+        <input matInput [(ngModel)]="contract.joined" placeholder="joined">
+      </mat-form-field>
+    </div>
+     
+
+    <div mat-dialog-actions>
+      <button mat-button>Cancel</button>
+      <button mat-button (click)="addPlayer_and_Contract()">Add</button>
+    </div>
+  </div>
+
+
+
+
+
+    <!------------------------------------add manager-------------------------------------------------------->
+
+  <div *ngIf="item === 'manager'">
+    <div >
+      <h1 mat-dialog-title>Add Manager</h1>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput [(ngModel)]="manager.fullName" placeholder="Full Name">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [(ngModel)]="manager.dateOfBirth" placeholder="Date of Birth">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput [(ngModel)]="manager.age" placeholder="Age">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Height</mat-label>
+        <input matInput [(ngModel)]="manager.nationality" placeholder="Height">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Citizenship</mat-label>
+        <input matInput [(ngModel)]="manager.role" placeholder="Citizenship">
+      </mat-form-field>
+  
+    
+  
+      <!-- <div mat-dialog-actions>
+        <button mat-button>Cancel</button>
+       <button mat-button (click)="addPlayer()">Add</button> 
+      </div>
+    </div> -->
+    
+  
+    <div>
+      <h1 mat-dialog-title>Add contract for the manager</h1>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Contract expires</mat-label>
+        <input matInput [(ngModel)]="contract.contractExpires" placeholder="contractExpires">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Contract Option</mat-label>
+        <input matInput [(ngModel)]="contract.contractOption" placeholder="contractOption">
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="fill">
+        <mat-label>previousClubID</mat-label>
+        <input matInput [(ngModel)]="contract.previousClubID" placeholder="previousClubID">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>currentClubID</mat-label>
+        <input matInput [(ngModel)]="contract.currentClubID" placeholder="currentClubID">
+      </mat-form-field>
+  
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Football Club</mat-label>
+        <mat-select [(ngModel)]="contract.previousClubID" placeholder="footballClubID">
+          <mat-option *ngFor="let x of footballClubs" [value]="x.id">
+            {{x.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+  
+      <mat-form-field appearance="fill">
+        <mat-label>joined</mat-label>
+        <input matInput [(ngModel)]="contract.joined" placeholder="joined">
+      </mat-form-field>
+  
+      <div mat-dialog-actions>
+        <button mat-button>Cancel</button>
+        <button mat-button (click)="addManager_and_Contract()">Add</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!---------------------------------------------add football club-------------------------------------->
+
+
+  <div *ngIf="item === 'footballClub'">
+    <h1 mat-dialog-title>Add football club</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="footballClub.name" placeholder="Name" (click)="$event.stopPropagation()">
+      <mat-label>Squad Size</mat-label>
+      <input matInput [(ngModel)]="footballClub.squadSize" placeholder="Date of Birth" (click)="$event.stopPropagation()">
+      <mat-label>Average age</mat-label>
+      <input matInput [(ngModel)]="footballClub.averageAge" placeholder="Age" (click)="$event.stopPropagation()">
+      <mat-label>Stadium</mat-label>
+      <input matInput [(ngModel)]="footballClub.stadium" placeholder="Nationality" (click)="$event.stopPropagation()">
+      <mat-label>Manager</mat-label>
+      <mat-select [(ngModel)]="footballClub.managerID" placeholder="Role">
+          <mat-option *ngFor="let manager of managers" [value]="manager.id">
+              {{manager.fullName}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+  
+    <div mat-dialog-actions>
+        <button mat-button>Cancel</button>
+        <button mat-button (click)="addFootballClub()">Add</button>
+    </div>
+  </div>
+
+
+</div>
+
